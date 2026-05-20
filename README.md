@@ -1,4 +1,4 @@
-# Modern-todo-website
+# School project website
 Responsive multi-page website project built with HTML5, CSS3, JavaScript, PHP 8.4 and Bootstrap 5. Features include a carousel homepage, responsive navigation, To-Do list application with JavaScript functionality, contact form validation using PHP, reusable components (header/footer) and mobile-friendly design.
 
 A responsive multi-page website project built for a Web Programming seminar assignment using HTML5, CSS3, JavaScript, PHP 8.4, and Bootstrap 5.3.8.
