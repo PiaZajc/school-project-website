@@ -1,0 +1,807 @@
+/* --- FONT --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+/* osnovno oblikovanje */
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+}
+
+main {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+@media (max-width: 475px) {
+    h1 {
+        font-size: 35px;
+    }
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+h3:hover {
+    text-shadow: 1px 1px 1px rgb(101, 101, 101);
+}
+
+.long-text, p {
+    font-size: 15px;
+}
+
+.font-size-small {
+    font-size: 13px;
+}
+
+/* --- NAVBAR --- */
+.navbar-brand {
+    color: rgb(199, 199, 199);
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+}
+
+.navbar-nav {
+    padding: 2px;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(199, 199, 199);
+    font-weight: bold;                             
+    font-size: 17px;
+}
+
+.navbar-nav .nav-link:hover {
+    text-shadow: 1px 1px 1px rgb(199, 199, 199);
+}
+.navbar-nav .nav-link.active:hover {
+    text-shadow: 1px 1px 1px rgb(199, 199, 199);
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+
+/* CAROUSEL */
+#my-carousel {
+    max-width: 1500px;                          
+    margin: 0px auto; /* top, bottom = 0, left, right = auto */
+}
+
+/* DESKTOP */
+.carousel-item img {    
+    width: 100vh;
+    height: auto;
+    object-fit: cover;
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+    .carouselMain {
+        min-height: 40vh;
+    }
+    .carousel-item img {
+        min-height: 40vh;
+        object-fit: contain; /* ohrani dimenzije slik */
+    }
+}
+
+
+/* LINE BREAK */
+.line-break {
+    height: 3vh;
+}
+
+
+/* HERO SECTION */
+.hero-section {
+    background: rgba(218, 255, 194, 0.66);
+    position: relative;
+    min-height: 550px;
+}
+
+.hero-content {
+    min-height: 200px;
+}
+
+.hero-content h1 {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.leaf {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* leva slika - zgoraj levo */
+.leaf-left {
+    left: 3px;
+    top: 0;
+    height: 70%;
+}
+
+/* desna slika - spodaj desno */
+.leaf-right {
+    right: 0;
+    bottom: 0;
+    height: 70%;
+}
+
+.hero-text {
+    position: relative; 
+    z-index: 2; 
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+@media (max-width: 1100px) {
+    .leaf-left {
+        height: 45%;
+    }
+    .leaf-right {
+        height: 50%;
+    }
+}
+
+@media (max-width: 930px) {
+    .leaf-left {
+        height: 40%; 
+    }
+    .leaf-right {
+        height: 40%; 
+    }
+}
+
+@media (max-width: 700px) {
+    .leaf-left {
+        height: 30%;
+    }
+    .leaf-right {
+        height: 37%;
+    }
+}
+
+@media (max-width: 500px) {
+    .leaf-left {
+        height: 25%;
+    }
+        .leaf-right {
+        height: 40%;
+    }
+}
+
+@media (max-width: 430px) {
+    .leaf-left {
+        height: 20%;
+    }
+        .leaf-right {
+        height: 30%;
+    }
+}
+
+@media (max-width: 360px) {
+    .leaf-left {
+        height: 15%;
+    }
+        .leaf-right {
+        height: 20%;
+    }
+}
+
+/* BOXI v index.php */
+.text-box {
+    flex: 0 0 75%;
+    padding-left: 15px;
+}
+
+.long-text {
+    padding-right: 15px;
+}
+
+.icons {
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.icon-box {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-gradient-green {
+    background: linear-gradient(
+        to right,
+        rgba(169, 221, 156, 0.66) 15%,
+        white 40%
+    );
+}
+
+.box-gradient-blue {
+    background: linear-gradient(
+        to right,
+        rgba(211, 238, 255, 0.66) 15%,
+        white 40%
+    );
+}
+
+.box-gradient-yellow {
+    background: linear-gradient(
+        to right,
+        rgba(253, 255, 189, 0.66) 15%,
+        white 40%
+    );
+}
+
+.background-section {
+    position: relative;
+    background-color: rgba(211, 238, 255, 0.66);
+    display: flex;
+    padding: 50px;
+}
+
+.background-title-section {
+    background-color: rgba(211, 238, 255, 0.66);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.background-sub-title-section {
+    background: linear-gradient(
+        to right,
+        rgba(169, 221, 156, 0.66) 40%,
+        white 70%
+    );
+}
+
+.text-sub-title-section {
+    padding: 8px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+/* TABELE */
+caption h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: bold;
+  color:rgb(50, 50, 50);
+  text-transform: uppercase;
+  background-color: rgba(169, 221, 156, 0.66);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+caption h3:hover {
+    text-shadow: 1px 1px 1px rgb(101, 101, 101);
+}
+
+table tr:hover td {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+caption {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+thead tr th {
+    padding: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+
+    table thead {
+        display: none;
+    }
+
+    table,
+    caption, 
+    table tbody, 
+    table tr, 
+    table td {
+        display: block;
+        width: 100%;
+    }
+
+    caption h3 {
+        border: none;
+        padding: 15px;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    table tr {
+        padding: 10px;
+        border: none;
+    }
+
+    table td {
+        text-align: left;
+        /* vertical-align: top; */
+        border: none;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1px;
+        padding-left: 3px;
+        background-color: rgba(169, 221, 156, 0.2);
+    }
+    
+}
+
+
+/* O MENI */
+.o-meni-img-position {
+    position: relative;
+    min-height: 40vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* skupni class */
+.o-meni-img {
+    position: absolute;
+    pointer-events: none;
+}
+
+.portrait {
+    height: 60%;
+    z-index: 2;
+}
+
+.background {
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 460px) {
+    .o-meni-img-position {
+        min-height: 25vh;
+    }
+}
+
+
+.my-list {
+    list-style: none;
+}
+.my-list a {
+    text-decoration: none;
+    color: rgb(83, 83, 83);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.my-list a:active {
+    color: rgba(83, 83, 83, 0.5);
+}
+.my-list a:hover {
+    padding-left: 5px;
+}
+.my-list a:visited {
+  color: rgba(123, 160, 114, 0.5);
+}
+
+.my-list li {
+    list-style-image: url('/img/subdirectoryArrowRight.png');
+}
+
+ul {
+    padding-left: 3rem;
+    padding-right: 1rem;
+}
+
+
+/* ---- OPRAVILA ---- */
+.form-opravila {
+    display: flex;
+    gap: 3px;
+    padding-inline: 10%;
+    margin-top: 10px;
+}
+
+#todo-input {
+    border-radius: 10px;
+    border: 4px solid rgb(211, 238, 255);
+    padding: 10px 5px;
+    width: 100%;
+    background-color: rgba(211, 238, 255, 0.66);
+}
+
+#todo-input:focus {
+    outline: none;
+}
+
+#add-button {
+    right: 0;
+    border-radius: 10px;
+    padding: 9px;
+    border: 4px solid;
+    border-color: rgb(211, 238, 255);
+    background-color: rgba(211, 238, 255, 0.66);
+}
+
+#todo-input {
+    text-decoration: none;
+}
+
+/* TASKI */
+#todo-list {
+    list-style-type: none;
+    padding-inline: 10%;
+}
+
+.todo-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-block: 5px;
+    padding: 8px;
+    box-shadow: 1px 1px 10px hsl(0deg 0% 0% / 0.1);
+    border-radius: 10px;
+}
+
+input[type="checkbox"]  {
+   display: none;
+}
+
+.custom-checkbox img {
+    opacity: 0;
+    width: 24px;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox img {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+    border-color: rgb(169, 221, 156);
+    background-color: rgba(169, 221, 156, 0.66);
+    transition: all 0.3s ease;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox {
+    border-radius: 10px;
+    padding: 9px;
+    border: 4px solid;
+    border-color: rgb(238, 118, 118);
+    background-color: rgba(238, 118, 118, 0.66);
+    height: auto;
+    cursor: pointer;
+}
+
+.todo-text {
+    padding: 15px;
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.delete-button {
+    border-radius: 10px;
+    padding: 9px;
+    border: 4px solid;
+    border-color: rgb(211, 238, 255);
+    background-color: rgba(211, 238, 255, 0.66);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.delete-button img {
+    width: 24px;
+    transition: 0.2s ease;
+}
+
+.delete-button:hover {
+    transform: scale(1.1);
+}
+
+.edit-button {
+    border-radius: 10px;
+    padding: 9px;
+    border: 4px solid;
+    border-color: rgb(211, 238, 255);
+    background-color: rgba(211, 238, 255, 0.66);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.edit-button img {
+    width: 24px;
+    transition: 0.2s ease;
+}
+
+.edit-button:hover {
+    transform: scale(1.1);
+}
+
+.edit-button,
+.delete-button {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+
+    .delete-button {
+        padding: 3px;
+        border: 3px solid;
+        height: 36px;
+        width: 36px;
+        border-color: rgb(211, 238, 255);
+        background-color: rgba(211, 238, 255, 0.66);
+    }
+
+    .edit-button {
+        padding: 3px;
+        border: 3px solid;
+        height: 36px;
+        width: 36px;
+        border-color: rgb(211, 238, 255);
+        background-color: rgba(211, 238, 255, 0.66);
+    }
+
+    .custom-checkbox {
+        padding: 3px;
+        border: 3px solid;
+        border-color: rgb(238, 118, 118);
+        background-color: rgba(238, 118, 118, 0.66);
+    }
+
+    .todo-text {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    #todo-list {
+        padding-inline: 5%;
+    }
+
+    .form-opravila {
+        padding-inline: 5%;
+    }
+    #todo-input {
+        border: 3px solid rgb(211, 238, 255);
+        background-color: rgba(211, 238, 255, 0.66);
+        padding: 7px 5px;
+    }
+
+    #add-button {
+        padding: 5px;
+        border: 3px solid;
+        border-color: rgb(211, 238, 255);
+        background-color: rgba(211, 238, 255, 0.66);
+    }
+}
+
+#progress-number {
+    width: 20%;
+    height: 60px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid;
+    border-color: rgb(211, 238, 255);
+    background-color: rgba(211, 238, 255, 0.66);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#progress-bar {
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    border: 3px solid rgb(211, 238, 255);
+    background-color: rgba(211, 238, 255, 0.66);
+    overflow: hidden; /* skrije vse kar je obarvano od id progress, kar gre čez dimenzije progress-bara */
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: rgba(169, 221, 156, 0.66);
+    transition: width 1s ease;
+}
+
+@media (max-width: 600px) {
+    #progress-number {
+        width: 35%;
+    }
+    #progress-bar {
+        width: 70%;
+    }
+}
+
+/* animacija */
+#confetti-gif {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* KONTAKTNI OBRAZEC */
+.form-control:focus {
+    border: none;
+    box-shadow: 0 0 0 0.25rem rgba(0, 87, 128, 0.25);
+}
+
+.form-control {
+    border: solid 1px rgb(114, 114, 114);
+}
+
+
+/* FOOTER */
+.links-footer {
+    padding: 1px;
+    color: rgba(212, 212, 212, 0.8);
+}
+
+.links-footer:hover {
+    text-shadow: 1px 1px 1px rgb(226, 226, 226);
+}
+
+.main-text-footer {
+    color: rgb(240, 240, 240);
+}
+
+.heading-footer {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 17px;
+}
+/* --- FOOTER --- */
+
+
+
+/* OSTALO */
+/* Animacije */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%) scale(0.7);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slideInFromRight {
+    0% {
+        -webkit-transform: translateX(100%) scale(0.7);
+        transform: translateX(100%) scale(0.7);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.animatedHeading {
+    opacity: 0.0001;
+}
+
+.animatedHeading.active {
+    -webkit-animation: slideInFromRight 2s ease forwards;
+    animation: slideInFromRight 2s ease forwards;
+}
+
+@keyframes scaleBounce {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes scaleBounce {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    60% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    80% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.scaleAnimation {
+    transform: scale(0.0001);
+}
+
+.scaleAnimation.active {
+    -webkit-animation: scaleBounce 3s ease forwards;
+    animation: scaleBounce 3s ease forwards;
+}
